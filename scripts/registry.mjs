@@ -7,9 +7,10 @@
 //   REGISTRY_URL=https://example.com pnpm registry:build
 //
 // Items:
-// - hardware: the <Hardware> root, the skin's stylesheets and the page-wide
-//   behaviors (haptics, sounds, focus modality, block caret, Safari tabbing).
-//   Every other item depends on it.
+// - hardware: a registry:item that sets the project up for the kit: the
+//   <Hardware> root, the skin's stylesheets, the page-wide behaviors
+//   (haptics, sounds, focus modality, block caret, Safari tabbing), and the
+//   font, imported into the project's CSS file. Every other item depends on it.
 // - one item per component in registry/hardware/ui
 // - <component>-demo: one usage example per component, as the catalog shows it
 // - one block per device in registry/hardware/blocks
@@ -132,6 +133,10 @@ function dependenciesOf(files, self) {
   return { npm: [...npm].sort(), items: [...items].sort() }
 }
 
+// The kit's type: IBM Plex Mono, the weights the skin uses, loaded before
+// anything is drawn (as the site's own font is), not swapped in.
+const fontImport = '@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500&display=block")'
+
 function item(name, type, title, description, files, extra = {}) {
   const { npm, items } = dependenciesOf(files.map((f) => f.path), name)
   const deps = [...new Set([...(extra.after ?? []), ...items])].filter((n) => n !== name)
@@ -144,6 +149,7 @@ function item(name, type, title, description, files, extra = {}) {
     ...(npm.length && { dependencies: npm }),
     ...(deps.length && { registryDependencies: deps.map(itemUrl) }),
     files,
+    ...(extra.css && { css: extra.css }),
     ...(extra.docs && { docs: extra.docs }),
     ...(extra.categories && { categories: extra.categories }),
   }
@@ -164,16 +170,17 @@ const styles = list(`${reg}/ui/hardware`, (f) => f.endsWith(".css") && f !== "de
 items.push(
   item(
     "hardware",
-    "registry:ui",
+    "registry:item",
     "Hardware",
-    "The hardware skin: the <Hardware> root, its stylesheets, and the page-wide behaviors the components rely on (haptics, interaction sounds, keyboard-only focus rings, a block caret and Safari's Tab order).",
+    "Sets a project up for the hardware kit: the <Hardware> root, the skin's stylesheets, the IBM Plex Mono font, and the page-wide behaviors the components rely on (haptics, interaction sounds, keyboard-only focus rings, a block caret and Safari's Tab order).",
     [
       file(`${reg}/ui/hardware.tsx`, "registry:ui"),
       ...styles.map((f) => file(`${reg}/ui/hardware/${f}`, "registry:file")),
       ...list(`${reg}/lib`, (f) => f.endsWith(".ts")).map((f) => file(`${reg}/lib/${f}`, "registry:lib")),
     ],
     {
-      docs: "Wrap your app (or any part of it) in <Hardware> from @/components/ui/hardware; everything inside is styled by the skin. Set keyColor={{ l: 0.64, c: 0.31, h: 48 }} for an orange-red key color. The type is set in Spec Mono, then IBM Plex Mono: install IBM Plex Mono (weights 200 to 500) for the intended look.",
+      css: { [fontImport]: {} },
+      docs: "Wrap your app (or any part of it) in <Hardware> from @/components/ui/hardware; everything inside is styled by the skin. Set keyColor={{ l: 0.64, c: 0.31, h: 48 }} for an orange-red key color. IBM Plex Mono is imported at the top of your CSS file.",
       categories: ["theme"],
     },
   ),

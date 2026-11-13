@@ -116,3 +116,11 @@
     will-change: transform;
   }
 }
+
+
+/* The keys repeat while held, so a long press on them stays a press. */
+[data-skin="hardware"] [data-kit="page-wheel-row"] {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}

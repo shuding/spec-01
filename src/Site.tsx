@@ -1,8 +1,10 @@
 import * as React from "react"
 import { CatalogGrid } from "./catalog/Catalog"
 import { Navbar } from "@/registry/hardware/ui/navbar"
-import { Toasts } from "@/registry/hardware/ui/toaster"
+import { Toasts, notify } from "@/registry/hardware/ui/toaster"
 import { Icon } from "@/registry/hardware/ui/icon"
+import { Button } from "@/registry/hardware/ui/button"
+import { Popover, PopoverClose, PopoverContent, PopoverTrigger } from "@ui-sdk/react/popover"
 import { haptic } from "@/registry/hardware/lib/haptics"
 import { onSoundChange, setSoundEnabled, soundEnabled } from "@/registry/hardware/lib/sound"
 import { KeyPicker, defaultKey, themeStyle } from "./LabPanel"
@@ -52,14 +54,61 @@ function Page({ route }: { route: string }) {
         <p>
           A hardware theme for{" "}
           <a href="https://ui-sdk.dev" target="_blank">
-            UI SDK
+            Vercel UI SDK
           </a>
-          , a library of behaviors to build your own components. Every control here is a UI SDK component
+          , a library of behaviors to build your own components. Every control here is a Vercel UI SDK component
           underneath.
         </p>
+        <InstallPrompt />
       </header>
       <CatalogGrid />
     </>
+  )
+}
+
+// What to tell a coding agent to install the kit: the registry, and the root
+// everything sits in.
+const agentPrompt = `Install components from the SPEC-01 shadcn registry,
+https://spec-01.vercel.app/r/registry.json
+Wrap the app in <Hardware> from components/ui/hardware.`
+
+// The prompt opens in a popover from the link, printed on its LCD with a
+// cursor waiting after it, and a key that copies it.
+function InstallPrompt() {
+  const [copied, setCopied] = React.useState(false)
+  const copy = () => {
+    notify("Copied", { description: "Paste it into your coding agent." })
+    haptic("success")
+    setCopied(true)
+    setTimeout(() => setCopied(false), 1400)
+    navigator.clipboard.writeText(agentPrompt).catch(() => {
+      setCopied(false)
+      haptic("error")
+      notify("Couldn't copy", { description: "The clipboard wasn't available." })
+    })
+  }
+  return (
+    <div data-install-prompt>
+      <Popover>
+        <PopoverTrigger data-kit="link">Installation prompt</PopoverTrigger>
+        <PopoverContent data-kit="popover" side="bottom" align="start" sideOffset={12} aria-label="Installation prompt">
+          <div data-kit="popover-surface" data-install-prompt-surface>
+            <p data-install-prompt-text>
+              {agentPrompt}
+              <span data-install-caret aria-hidden />
+            </p>
+            <div data-kit="actions">
+              <PopoverClose data-kit="button" data-tone="secondary">
+                Close
+              </PopoverClose>
+              <Button tone="primary" onClick={copy}>
+                {copied ? "Copied" : "Copy"}
+              </Button>
+            </div>
+          </div>
+        </PopoverContent>
+      </Popover>
+    </div>
   )
 }
 

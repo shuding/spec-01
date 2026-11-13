@@ -2,7 +2,7 @@
 
 A component kit in the style of pocket instruments: light molded panels, keys
 standing in their holes, LCD screens, LEDs and printed scales. Every control is
-built on UI SDK behaviors, with
+built on [Vercel UI SDK](https://ui-sdk.dev) behaviors, with
 haptics and synthesized interaction sounds.
 
 The site, [spec-01.vercel.app](https://spec-01.vercel.app), shows every
@@ -12,14 +12,9 @@ example and device installs into your project with the shadcn CLI.
 
 ## Install from the registry
 
-The UI SDK packages come from their own npm registry. Add it to your
-project's `.npmrc` first:
-
-```ini
-@ui-sdk:registry=https://ui-sdk-registry.labs.vercel.dev/
-```
-
-Then add the registry to `components.json` and install what you need:
+Add the registry to `components.json` and install what you need. The
+[Vercel UI SDK](https://ui-sdk.dev) packages the components are built on,
+`@ui-sdk/core` and `@ui-sdk/react`, install from npm along with them:
 
 ```sh
 npx shadcn@latest registry add @spec-01=https://spec-01.vercel.app/r/{name}.json
@@ -29,10 +24,11 @@ npx shadcn@latest add @spec-01/mode-dial @spec-01/slider
 Any item also installs from its URL, e.g.
 `npx shadcn@latest add https://spec-01.vercel.app/r/music-player.json`.
 
-Every item depends on `hardware`: the skin's stylesheets, a `<Hardware>`
-root, and the page-wide behaviors the components rely on (haptics, sounds,
-keyboard-only focus rings, a block caret, Safari's Tab order). Wrap your app,
-or any part of it, in the root:
+Every item depends on `hardware`, which sets the project up for the kit: the
+skin's stylesheets, a `<Hardware>` root, the font, and the page-wide
+behaviors the components rely on (haptics, sounds, keyboard-only focus
+rings, a block caret, Safari's Tab order). Wrap your app, or any part of it,
+in the root:
 
 ```tsx
 import { Hardware } from "@/components/ui/hardware"
@@ -59,15 +55,15 @@ export function App() {
   it the keys are black.
 - **Styling:** plain CSS, scoped to `[data-skin="hardware"]`. No Tailwind
   needed; each component's parts carry `data-kit` hooks the skin styles.
-- **Type:** set in Spec Mono, then IBM Plex Mono. Install IBM Plex Mono
-  (weights 200 to 500, e.g. from `@fontsource/ibm-plex-mono`) for the
-  intended look.
+- **Type:** IBM Plex Mono, weights 200 to 500. Installing `hardware` adds
+  its Google Fonts `@import` to the top of your CSS file (the one in
+  `components.json`).
 
 ### What's in it
 
 | Items | Names | Installs to |
 | --- | --- | --- |
-| The skin | `hardware` | `components/ui/hardware.tsx`, `components/ui/hardware/*.css`, `lib/*.ts` |
+| The skin | `hardware` | `components/ui/hardware.tsx`, `components/ui/hardware/*.css`, `lib/*.ts`, and a font `@import` in your CSS file |
 | 61 components | `button`, `slider`, `mode-dial`, `slide-switch`, `lcd`, `display`, `dpad`, ... | `components/ui/` |
 | 52 examples | `<component>-demo`, one per catalog panel | `components/examples/` |
 | 7 devices | `music-player`, `paint`, `midi-editor`, `timer`, `color`, `image-editor`, `dashboard` | `components/blocks/<device>/` |
@@ -89,7 +85,7 @@ pnpm registry:build      # just the registry, into public/r
 
 | Path | Page |
 | --- | --- |
-| `/` | Every component, one panel each. A panel's title opens the UI SDK behaviors and APIs it's built on. |
+| `/` | Every component, one panel each. A panel's title opens the Vercel UI SDK behaviors and APIs it's built on. |
 | `/music` | MP-1 Player: screen, transport keys, a scrubbing fader and the queue. |
 | `/paint` | PX-1 Paint: a drawing pad behind glass, with tool keys and brush dials. |
 | `/midi` | MX-1 MIDI: a piano roll played through a small synth. |
@@ -121,7 +117,7 @@ pnpm registry:build      # just the registry, into public/r
 | Script | Writes | Rerun when |
 | --- | --- | --- |
 | `pnpm registry:build` | `registry.json`, `public/r/*.json` | You add, rename or change items. `pnpm build` runs it, so deploys always serve the current registry. Set `REGISTRY_URL` to build for another domain. |
-| `node scripts/sdk-chain.mjs` | `src/catalog/sdk-chain.ts` | You upgrade `@ui-sdk/*` or import a new UI SDK module. |
+| `node scripts/sdk-chain.mjs` | `src/catalog/sdk-chain.ts` | You upgrade `@ui-sdk/*` or import a new Vercel UI SDK module. |
 | `scripts/fonts/.venv/bin/python scripts/fonts/subset.py` | `public/fonts/`, the font block in `index.html` | New text, weights or OpenType features appear. Run it with `--check` to see whether it's needed. |
 
 The font script needs a one-time setup:

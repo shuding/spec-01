@@ -5,9 +5,9 @@
   "items": [
     {
       "name": "hardware",
-      "type": "registry:ui",
+      "type": "registry:item",
       "title": "Hardware",
-      "description": "The hardware skin: the <Hardware> root, its stylesheets, and the page-wide behaviors the components rely on (haptics, interaction sounds, keyboard-only focus rings, a block caret and Safari's Tab order).",
+      "description": "Sets a project up for the hardware kit: the <Hardware> root, the skin's stylesheets, the IBM Plex Mono font, and the page-wide behaviors the components rely on (haptics, interaction sounds, keyboard-only focus rings, a block caret and Safari's Tab order).",
       "author": "Shu Ding <https://x.com/shuding>",
       "files": [
         {
@@ -196,7 +196,10 @@
           "target": "@lib/sound.ts"
         }
       ],
-      "docs": "Wrap your app (or any part of it) in <Hardware> from @/components/ui/hardware; everything inside is styled by the skin. Set keyColor={{ l: 0.64, c: 0.31, h: 48 }} for an orange-red key color. The type is set in Spec Mono, then IBM Plex Mono: install IBM Plex Mono (weights 200 to 500) for the intended look.",
+      "css": {
+        "@import url(\"https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300;400;500&display=block\")": {}
+      },
+      "docs": "Wrap your app (or any part of it) in <Hardware> from @/components/ui/hardware; everything inside is styled by the skin. Set keyColor={{ l: 0.64, c: 0.31, h: 48 }} for an orange-red key color. IBM Plex Mono is imported at the top of your CSS file.",
       "categories": [
         "theme"
       ]
@@ -665,6 +668,7 @@
       "description": "A four-way directional pad that tilts toward the pressed side.",
       "author": "Shu Ding <https://x.com/shuding>",
       "dependencies": [
+        "@ui-sdk/core@0.0.0-20261111125312.ga16c1d57",
         "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
       ],
       "registryDependencies": [
@@ -956,6 +960,7 @@
       "description": "Pagination as a thumb wheel with previous and next keys.",
       "author": "Shu Ding <https://x.com/shuding>",
       "dependencies": [
+        "@ui-sdk/core@0.0.0-20261111125312.ga16c1d57",
         "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
       ],
       "registryDependencies": [

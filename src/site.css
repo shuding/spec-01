@@ -36,6 +36,56 @@
   }
 }
 
+/* The link to the prompt for a coding agent, under the subtitle. It opens
+   a popover, so it's a button, drawn as the link. */
+[data-site] [data-kit="masthead"] [data-install-prompt] {
+  margin-top: 14px;
+  font-size: 15px;
+
+  & button[data-kit="link"] {
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+  }
+}
+
+/* The prompt in its popover, printed on the LCD in its own case, keeping
+   its breaks, with a block cursor blinking after the last line. */
+[data-skin="hardware"] [data-install-prompt-surface]:not(#_):not(#_) {
+  width: min(580px, calc(100vw - 32px));
+
+  & [data-install-prompt-text] {
+    max-width: none;
+    margin: 0;
+    padding: 4px 2px 0;
+    font: 400 13px/1.65 var(--sans);
+    color: var(--gray-ink);
+    text-transform: none;
+    white-space: pre-wrap;
+    /* Rows fill to the edge and break at any character, as on a character LCD. */
+    word-break: break-all;
+  }
+
+  & [data-install-caret] {
+    display: inline-block;
+    width: 0.6em;
+    height: 1.15em;
+    margin-inline-start: 2px;
+    vertical-align: -0.22em;
+    background: var(--gray-ink);
+    animation: screen-cursor 1.1s steps(1) infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-skin="hardware"] [data-install-caret] {
+    animation: none;
+  }
+}
+
 [data-site] [data-kit="masthead"] p {
   max-width: 54ch;
   margin-top: 14px;

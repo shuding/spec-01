@@ -1,4 +1,5 @@
 import * as React from "react"
+import { bindRepeat } from "@ui-sdk/core"
 import { Pagination, PaginationNext, PaginationPrevious } from "@ui-sdk/react/pagination"
 import { Icon } from "@/registry/hardware/ui/icon"
 import { haptic } from "@/registry/hardware/lib/haptics"
@@ -8,6 +9,47 @@ import { haptic } from "@/registry/hardware/lib/haptics"
 // an end key can't be focused and the skin's :disabled look applies. (The
 // parts' types allow for links, which have no disabled.)
 const nativeDisabled = (disabled: boolean) => ({ disabled }) as object
+// The same goes for their refs, typed for links: these keys are buttons.
+const keyRef = (ref: React.RefObject<HTMLButtonElement | null>) => ref as unknown as React.Ref<HTMLAnchorElement>
+
+// Holding a key keeps paging. A pointer press steps through core's
+// bindRepeat: once on the press (a touch tap, on release), then every 80ms
+// after 380ms held; the click that follows is swallowed so the part doesn't
+// step again. A click with no pointer behind it (Enter, Space, a screen
+// reader) is left to the part, which steps once. A press that ends without a
+// click is forgotten at the next press.
+function useHoldToStep(key: React.RefObject<HTMLElement | null>, step: React.RefObject<() => void>) {
+  React.useEffect(() => {
+    const el = key.current!
+    let held = false
+    const reset = () => (held = false)
+    const swallow = (event: MouseEvent) => {
+      if (!held) return
+      held = false
+      event.preventDefault()
+      event.stopImmediatePropagation()
+    }
+    el.addEventListener("pointerdown", reset, true)
+    el.addEventListener("click", swallow, true)
+    const unbind = bindRepeat(el, {
+      delay: 380,
+      repeat: 80,
+      keys: [],
+      onStep: ({ count, input }) => {
+        if (input === "click") return
+        held = true
+        // Each repeat is felt; the press itself is felt from the press.
+        if (count > 1) haptic("selection")
+        step.current()
+      },
+    })
+    return () => {
+      unbind()
+      el.removeEventListener("pointerdown", reset, true)
+      el.removeEventListener("click", swallow, true)
+    }
+  }, [key, step])
+}
 
 const spacing = 46
 const step = 16
@@ -139,6 +181,17 @@ function PageWheel({
     commit(p)
   }
 
+  // The keys repeat from where the drum is headed, which is current between
+  // renders.
+  const previousKey = React.useRef<HTMLButtonElement>(null)
+  const nextKey = React.useRef<HTMLButtonElement>(null)
+  const stepBack = React.useRef(() => {})
+  const stepOn = React.useRef(() => {})
+  stepBack.current = () => goTo(Math.round(motion.current.target) - 1)
+  stepOn.current = () => goTo(Math.round(motion.current.target) + 1)
+  useHoldToStep(previousKey, stepBack)
+  useHoldToStep(nextKey, stepOn)
+
   React.useLayoutEffect(paint)
 
   React.useEffect(() => {
@@ -180,7 +233,7 @@ function PageWheel({
 
   return (
     <Pagination data-kit="page-wheel-row" aria-label={label} page={page} pageCount={pageCount} onPageChange={(next: number) => goTo(next)}>
-      <PaginationPrevious data-kit="button" data-tone="secondary" data-shape="round" aria-label="Previous page" {...nativeDisabled(page <= 1)}>
+      <PaginationPrevious ref={keyRef(previousKey)} data-kit="button" data-tone="secondary" data-shape="round" aria-label="Previous page" {...nativeDisabled(page <= 1)}>
         <Icon name="prev" />
       </PaginationPrevious>
       <div
@@ -260,7 +313,7 @@ function PageWheel({
           ))}
         </div>
       </div>
-      <PaginationNext data-kit="button" data-tone="secondary" data-shape="round" aria-label="Next page" {...nativeDisabled(page >= pageCount)}>
+      <PaginationNext ref={keyRef(nextKey)} data-kit="button" data-tone="secondary" data-shape="round" aria-label="Next page" {...nativeDisabled(page >= pageCount)}>
         <Icon name="next" />
       </PaginationNext>
     </Pagination>

@@ -203,3 +203,12 @@
     box-shadow: 0 0 8px color-mix(in oklab, var(--lcd-key) 50%, transparent);
   }
 }
+
+/* A held zone keeps pressing, so a long press must stay a press: no text
+   selection, no callout and no double-tap zoom on iOS. */
+[data-skin="hardware"] [data-kit="dpad"] {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+}
