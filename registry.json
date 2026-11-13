@@ -1,0 +1,2735 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "spec-01",
+  "homepage": "https://spec-01.vercel.app",
+  "items": [
+    {
+      "name": "hardware",
+      "type": "registry:ui",
+      "title": "Hardware",
+      "description": "The hardware skin: the <Hardware> root, its stylesheets, and the page-wide behaviors the components rely on (haptics, interaction sounds, keyboard-only focus rings, a block caret and Safari's Tab order).",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "files": [
+        {
+          "path": "registry/hardware/ui/hardware.tsx",
+          "type": "registry:ui",
+          "target": "@ui/hardware.tsx"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-accordion.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-accordion.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-bar-graph.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-bar-graph.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-dash.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-dash.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-date-setter.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-date-setter.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-dials.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-dials.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-display.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-display.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-dpad.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-dpad.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-extra.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-extra.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-field.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-field.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-item-list.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-item-list.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-lcd.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-lcd.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-menu.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-menu.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-more.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-more.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-navbar.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-navbar.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-objects.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-objects.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-page-wheel.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-page-wheel.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-rocker.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-rocker.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-roles.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-roles.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-screens.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-screens.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-side-tabs.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-side-tabs.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-slide-switch.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-slide-switch.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-tabs.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-tabs.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-textures.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-textures.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-touch.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-touch.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware-wheel.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware-wheel.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/hardware.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/hardware.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/layout.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/layout.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/skin.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/skin.css"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/tokens.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/tokens.css"
+        },
+        {
+          "path": "registry/hardware/lib/block-caret.ts",
+          "type": "registry:lib",
+          "target": "@lib/block-caret.ts"
+        },
+        {
+          "path": "registry/hardware/lib/chosen-item.ts",
+          "type": "registry:lib",
+          "target": "@lib/chosen-item.ts"
+        },
+        {
+          "path": "registry/hardware/lib/haptics.ts",
+          "type": "registry:lib",
+          "target": "@lib/haptics.ts"
+        },
+        {
+          "path": "registry/hardware/lib/input-modality.ts",
+          "type": "registry:lib",
+          "target": "@lib/input-modality.ts"
+        },
+        {
+          "path": "registry/hardware/lib/install.ts",
+          "type": "registry:lib",
+          "target": "@lib/install.ts"
+        },
+        {
+          "path": "registry/hardware/lib/safari-tabbing.ts",
+          "type": "registry:lib",
+          "target": "@lib/safari-tabbing.ts"
+        },
+        {
+          "path": "registry/hardware/lib/sound.ts",
+          "type": "registry:lib",
+          "target": "@lib/sound.ts"
+        }
+      ],
+      "docs": "Wrap your app (or any part of it) in <Hardware> from @/components/ui/hardware; everything inside is styled by the skin. Set keyColor={{ l: 0.64, c: 0.31, h: 48 }} for an orange-red key color. The type is set in Spec Mono, then IBM Plex Mono: install IBM Plex Mono (weights 200 to 500) for the intended look.",
+      "categories": [
+        "theme"
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "Stacked sections that open one at a time, each behind a key with a turning chevron.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/accordion.tsx",
+          "type": "registry:ui",
+          "target": "@ui/accordion.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert-dialog",
+      "type": "registry:ui",
+      "title": "Alert dialog",
+      "description": "A confirmation that has to be answered, for destructive actions.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/alert-dialog.tsx",
+          "type": "registry:ui",
+          "target": "@ui/alert-dialog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "A printed notice with a status lamp: info, success, warning or danger.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/alert.tsx",
+          "type": "registry:ui",
+          "target": "@ui/alert.tsx"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "Initials printed on a dot-matrix disc.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/avatar.tsx",
+          "type": "registry:ui",
+          "target": "@ui/avatar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "A small status label in one of five tones.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/badge.tsx",
+          "type": "registry:ui",
+          "target": "@ui/badge.tsx"
+        }
+      ]
+    },
+    {
+      "name": "bar-graph",
+      "type": "registry:ui",
+      "title": "Bar graph",
+      "description": "A segmented LED level meter across several channels.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/bar-graph.tsx",
+          "type": "registry:ui",
+          "target": "@ui/bar-graph.tsx"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "A path of pages, printed like a menu trail on a screen.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/breadcrumb.tsx",
+          "type": "registry:ui",
+          "target": "@ui/breadcrumb.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "title": "Button group",
+      "description": "Keys joined in one rocker, horizontal or vertical, with hold-to-repeat.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/core@0.0.0-20261111125312.ga16c1d57",
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/button-group.tsx",
+          "type": "registry:ui",
+          "target": "@ui/button-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "A key standing in its hole: primary, secondary or round, with haptics and a press sound.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/button.tsx",
+          "type": "registry:ui",
+          "target": "@ui/button.tsx"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "A raised panel with a heading, for grouping content.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/card.tsx",
+          "type": "registry:ui",
+          "target": "@ui/card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "carousel",
+      "type": "registry:ui",
+      "title": "Carousel",
+      "description": "Slides on a screen, stepped by keys and indicator dots.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/carousel.tsx",
+          "type": "registry:ui",
+          "target": "@ui/carousel.tsx"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "A latching key that stays down while checked, with an indicator lamp.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/checkbox.tsx",
+          "type": "registry:ui",
+          "target": "@ui/checkbox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "code-block",
+      "type": "registry:ui",
+      "title": "Code block",
+      "description": "Highlighted code on a screen, with a copy key.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/display.json",
+        "https://spec-01.vercel.app/r/toaster.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/code-block.tsx",
+          "type": "registry:ui",
+          "target": "@ui/code-block.tsx"
+        }
+      ]
+    },
+    {
+      "name": "collapsible",
+      "type": "registry:ui",
+      "title": "Collapsible",
+      "description": "One section behind a key that shows and hides it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/collapsible.tsx",
+          "type": "registry:ui",
+          "target": "@ui/collapsible.tsx"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "A text field that filters a list of options as you type.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/combobox.tsx",
+          "type": "registry:ui",
+          "target": "@ui/combobox.tsx"
+        }
+      ]
+    },
+    {
+      "name": "command-palette",
+      "type": "registry:ui",
+      "title": "Command palette",
+      "description": "A searchable list of commands in a dialog.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/command-palette.tsx",
+          "type": "registry:ui",
+          "target": "@ui/command-palette.tsx"
+        }
+      ]
+    },
+    {
+      "name": "context-menu",
+      "type": "registry:ui",
+      "title": "Context menu",
+      "description": "An area that opens a menu on right-click, or a long press on touch.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/context-menu.tsx",
+          "type": "registry:ui",
+          "target": "@ui/context-menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "data-table",
+      "type": "registry:ui",
+      "title": "Data table",
+      "description": "Rows with selection, status badges and a menu per row.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/avatar.json",
+        "https://spec-01.vercel.app/r/badge.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/data-table.tsx",
+          "type": "registry:ui",
+          "target": "@ui/data-table.tsx"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date picker",
+      "description": "A date field with a calendar that opens beside it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/date-setter.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/date-picker.tsx",
+          "type": "registry:ui",
+          "target": "@ui/date-picker.tsx"
+        }
+      ]
+    },
+    {
+      "name": "date-setter",
+      "type": "registry:ui",
+      "title": "Calendar",
+      "description": "A month calendar set with keys, like a watch's date.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/core@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/date-setter.tsx",
+          "type": "registry:ui",
+          "target": "@ui/date-setter.tsx"
+        }
+      ]
+    },
+    {
+      "name": "device",
+      "type": "registry:ui",
+      "title": "Device",
+      "description": "A molded device body with a maker's plate and power LED, scaled to fit narrow pages.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/device.tsx",
+          "type": "registry:ui",
+          "target": "@ui/device.tsx"
+        },
+        {
+          "path": "registry/hardware/ui/hardware/devices.css",
+          "type": "registry:file",
+          "target": "@ui/hardware/devices.css"
+        }
+      ]
+    },
+    {
+      "name": "dialog",
+      "type": "registry:ui",
+      "title": "Dialog",
+      "description": "A modal panel with a title, description and confirm and cancel keys.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/dialog.tsx",
+          "type": "registry:ui",
+          "target": "@ui/dialog.tsx"
+        }
+      ]
+    },
+    {
+      "name": "display",
+      "type": "registry:ui",
+      "title": "Display",
+      "description": "A screen in a thick black bezel, for images or any content.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/display.tsx",
+          "type": "registry:ui",
+          "target": "@ui/display.tsx"
+        }
+      ]
+    },
+    {
+      "name": "dpad",
+      "type": "registry:ui",
+      "title": "D-pad",
+      "description": "A four-way directional pad that tilts toward the pressed side.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/dpad.tsx",
+          "type": "registry:ui",
+          "target": "@ui/dpad.tsx"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "A panel that slides in from the edge of the page.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/drawer.tsx",
+          "type": "registry:ui",
+          "target": "@ui/drawer.tsx"
+        }
+      ]
+    },
+    {
+      "name": "feed",
+      "type": "registry:ui",
+      "title": "Feed",
+      "description": "A list of activity: who did what, and when.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/avatar.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/feed.tsx",
+          "type": "registry:ui",
+          "target": "@ui/feed.tsx"
+        }
+      ]
+    },
+    {
+      "name": "fieldset",
+      "type": "registry:ui",
+      "title": "Fieldset",
+      "description": "A labeled group of controls.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/fieldset.tsx",
+          "type": "registry:ui",
+          "target": "@ui/fieldset.tsx"
+        }
+      ]
+    },
+    {
+      "name": "flat-knob",
+      "type": "registry:ui",
+      "title": "Flat knob",
+      "description": "A knob turned by dragging, with a lit tick scale and a typed readout.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/flat-knob.tsx",
+          "type": "registry:ui",
+          "target": "@ui/flat-knob.tsx"
+        }
+      ]
+    },
+    {
+      "name": "hover-card",
+      "type": "registry:ui",
+      "title": "Hover card",
+      "description": "A card on a gray LCD that opens on hover, focus or tap.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/hover-card.tsx",
+          "type": "registry:ui",
+          "target": "@ui/hover-card.tsx"
+        }
+      ]
+    },
+    {
+      "name": "icon",
+      "type": "registry:ui",
+      "title": "Icon",
+      "description": "The kit's icons, drawn from Carbon.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@carbon/icons-react@^11.92.0"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/icon.tsx",
+          "type": "registry:ui",
+          "target": "@ui/icon.tsx"
+        }
+      ]
+    },
+    {
+      "name": "item-list",
+      "type": "registry:ui",
+      "title": "Item list",
+      "description": "Rows in columns on a screen, with one chosen row.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/item-list.tsx",
+          "type": "registry:ui",
+          "target": "@ui/item-list.tsx"
+        }
+      ]
+    },
+    {
+      "name": "lcd",
+      "type": "registry:ui",
+      "title": "LCD",
+      "description": "A segmented liquid-crystal readout, with seven-segment digits.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/lcd.tsx",
+          "type": "registry:ui",
+          "target": "@ui/lcd.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menu",
+      "type": "registry:ui",
+      "title": "Menu",
+      "description": "A round key that opens a menu of actions.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/menu.tsx",
+          "type": "registry:ui",
+          "target": "@ui/menu.tsx"
+        }
+      ]
+    },
+    {
+      "name": "menubar",
+      "type": "registry:ui",
+      "title": "Menubar",
+      "description": "A row of menus, with checkable items.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/menubar.tsx",
+          "type": "registry:ui",
+          "target": "@ui/menubar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "meter",
+      "type": "registry:ui",
+      "title": "Meter",
+      "description": "A labeled level in a track, like a gauge.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/meter.tsx",
+          "type": "registry:ui",
+          "target": "@ui/meter.tsx"
+        }
+      ]
+    },
+    {
+      "name": "mode-dial",
+      "type": "registry:ui",
+      "title": "Mode dial",
+      "description": "A rotary selector with printed stops, turned by dragging or keys.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/mode-dial.tsx",
+          "type": "registry:ui",
+          "target": "@ui/mode-dial.tsx"
+        }
+      ]
+    },
+    {
+      "name": "navbar",
+      "type": "registry:ui",
+      "title": "Navbar",
+      "description": "A navigation bar on acrylic, with a lamp beside each page.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/navbar.tsx",
+          "type": "registry:ui",
+          "target": "@ui/navbar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "otp-input",
+      "type": "registry:ui",
+      "title": "OTP input",
+      "description": "One-time-code slots, typed one character each.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/otp-input.tsx",
+          "type": "registry:ui",
+          "target": "@ui/otp-input.tsx"
+        }
+      ]
+    },
+    {
+      "name": "page-wheel",
+      "type": "registry:ui",
+      "title": "Page wheel",
+      "description": "Pagination as a thumb wheel with previous and next keys.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/page-wheel.tsx",
+          "type": "registry:ui",
+          "target": "@ui/page-wheel.tsx"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "Page keys with previous, next and ellipses.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/pagination.tsx",
+          "type": "registry:ui",
+          "target": "@ui/pagination.tsx"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "A panel that opens from a key, with a title and description.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/popover.tsx",
+          "type": "registry:ui",
+          "target": "@ui/popover.tsx"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "A labeled progress bar.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/progress.tsx",
+          "type": "registry:ui",
+          "target": "@ui/progress.tsx"
+        }
+      ]
+    },
+    {
+      "name": "radio-group",
+      "type": "registry:ui",
+      "title": "Radio group",
+      "description": "Options where one is chosen, each with an indicator.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/radio-group.tsx",
+          "type": "registry:ui",
+          "target": "@ui/radio-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "resizable",
+      "type": "registry:ui",
+      "title": "Resizable",
+      "description": "Panels split by a handle that drags or steps with keys.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/resizable.tsx",
+          "type": "registry:ui",
+          "target": "@ui/resizable.tsx"
+        }
+      ]
+    },
+    {
+      "name": "scroll-area",
+      "type": "registry:ui",
+      "title": "Scroll area",
+      "description": "A scrolling region with its own scrollbar.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/scroll-area.tsx",
+          "type": "registry:ui",
+          "target": "@ui/scroll-area.tsx"
+        }
+      ]
+    },
+    {
+      "name": "segmented-control",
+      "type": "registry:ui",
+      "title": "Segmented control",
+      "description": "A row of segments with a sliding indicator, dragged or clicked.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/segmented-control.tsx",
+          "type": "registry:ui",
+          "target": "@ui/segmented-control.tsx"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "A thumb wheel of options, scrolled or dragged to choose.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/select.tsx",
+          "type": "registry:ui",
+          "target": "@ui/select.tsx"
+        }
+      ]
+    },
+    {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "description": "A printed rule between groups.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/separator.tsx",
+          "type": "registry:ui",
+          "target": "@ui/separator.tsx"
+        }
+      ]
+    },
+    {
+      "name": "side-tabs",
+      "type": "registry:ui",
+      "title": "Side tabs",
+      "description": "Tabs down the side of a panel, like index tabs.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/side-tabs.tsx",
+          "type": "registry:ui",
+          "target": "@ui/side-tabs.tsx"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Placeholder lines for content that's loading.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/skeleton.tsx",
+          "type": "registry:ui",
+          "target": "@ui/skeleton.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slide-switch",
+      "type": "registry:ui",
+      "title": "Slide switch",
+      "description": "A lever that slides between printed positions, horizontal or vertical.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/slide-switch.tsx",
+          "type": "registry:ui",
+          "target": "@ui/slide-switch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "A fader with a lit track and a value readout.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/slider.tsx",
+          "type": "registry:ui",
+          "target": "@ui/slider.tsx"
+        }
+      ]
+    },
+    {
+      "name": "stepper",
+      "type": "registry:ui",
+      "title": "Number stepper",
+      "description": "A number on a small screen with minus and plus keys.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/stepper.tsx",
+          "type": "registry:ui",
+          "target": "@ui/stepper.tsx"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "A toggle with a sliding thumb, dragged or clicked.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/switch.tsx",
+          "type": "registry:ui",
+          "target": "@ui/switch.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Tabs over panels, with a sliding indicator.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/tabs.tsx",
+          "type": "registry:ui",
+          "target": "@ui/tabs.tsx"
+        }
+      ]
+    },
+    {
+      "name": "text-field",
+      "type": "registry:ui",
+      "title": "Text field",
+      "description": "A labeled text input with a block caret.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/text-field.tsx",
+          "type": "registry:ui",
+          "target": "@ui/text-field.tsx"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "A labeled multi-line text input.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/textarea.tsx",
+          "type": "registry:ui",
+          "target": "@ui/textarea.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "A key that shows a toast message, with its own toast region.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/toast.tsx",
+          "type": "registry:ui",
+          "target": "@ui/toast.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toaster",
+      "type": "registry:ui",
+      "title": "Toaster",
+      "description": "The page's toast region and a notify() helper.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/toaster.tsx",
+          "type": "registry:ui",
+          "target": "@ui/toaster.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toggle-group",
+      "type": "registry:ui",
+      "title": "Toggle group",
+      "description": "Keys that latch together, one or several at a time.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/toggle-group.tsx",
+          "type": "registry:ui",
+          "target": "@ui/toggle-group.tsx"
+        }
+      ]
+    },
+    {
+      "name": "toolbar",
+      "type": "registry:ui",
+      "title": "Toolbar",
+      "description": "A row of keys and toggles, moved through with arrow keys.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/toolbar.tsx",
+          "type": "registry:ui",
+          "target": "@ui/toolbar.tsx"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "A label that appears on hover or focus, or a tap on touch.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/ui/tooltip.tsx",
+          "type": "registry:ui",
+          "target": "@ui/tooltip.tsx"
+        }
+      ]
+    },
+    {
+      "name": "accordion-demo",
+      "type": "registry:component",
+      "title": "Accordion demo",
+      "description": "How to use accordion, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/accordion.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/accordion-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/accordion-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "alert-demo",
+      "type": "registry:component",
+      "title": "Alert demo",
+      "description": "How to use alert, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/alert.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/alert-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/alert-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "alert-dialog-demo",
+      "type": "registry:component",
+      "title": "Alert dialog demo",
+      "description": "How to use alert dialog, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/alert-dialog.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/alert-dialog-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/alert-dialog-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "avatar-demo",
+      "type": "registry:component",
+      "title": "Avatar demo",
+      "description": "How to use avatar, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/avatar.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/avatar-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/avatar-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "badge-demo",
+      "type": "registry:component",
+      "title": "Badge demo",
+      "description": "How to use badge, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/badge.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/badge-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/badge-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "bar-graph-demo",
+      "type": "registry:component",
+      "title": "Bar graph demo",
+      "description": "How to use bar graph, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/bar-graph.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/bar-graph-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/bar-graph-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "breadcrumb-demo",
+      "type": "registry:component",
+      "title": "Breadcrumb demo",
+      "description": "How to use breadcrumb, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/breadcrumb.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/breadcrumb-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/breadcrumb-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "button-demo",
+      "type": "registry:component",
+      "title": "Button demo",
+      "description": "How to use button, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/button.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/button-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/button-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "button-group-demo",
+      "type": "registry:component",
+      "title": "Button group demo",
+      "description": "How to use button group, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/button-group.json",
+        "https://spec-01.vercel.app/r/icon.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/button-group-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/button-group-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "calendar-demo",
+      "type": "registry:component",
+      "title": "Calendar demo",
+      "description": "How to use calendar, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/date-setter.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/calendar-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/calendar-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "carousel-demo",
+      "type": "registry:component",
+      "title": "Carousel demo",
+      "description": "How to use carousel, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/carousel.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/carousel-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/carousel-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "checkbox-demo",
+      "type": "registry:component",
+      "title": "Checkbox demo",
+      "description": "How to use checkbox, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/checkbox.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/checkbox-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/checkbox-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "code-block-demo",
+      "type": "registry:component",
+      "title": "Code block demo",
+      "description": "How to use code block, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/code-block.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/code-block-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/code-block-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "collapsible-demo",
+      "type": "registry:component",
+      "title": "Collapsible demo",
+      "description": "How to use collapsible, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/collapsible.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/collapsible-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/collapsible-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "combobox-demo",
+      "type": "registry:component",
+      "title": "Combobox demo",
+      "description": "How to use combobox, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/combobox.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/combobox-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/combobox-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "command-demo",
+      "type": "registry:component",
+      "title": "Command palette demo",
+      "description": "How to use command palette, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/command-palette.json",
+        "https://spec-01.vercel.app/r/switch.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/command-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/command-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "context-menu-demo",
+      "type": "registry:component",
+      "title": "Context menu demo",
+      "description": "How to use context menu, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/context-menu.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/context-menu-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/context-menu-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "d-pad-demo",
+      "type": "registry:component",
+      "title": "D-pad demo",
+      "description": "How to use d-pad, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/dpad.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/d-pad-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/d-pad-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "date-picker-demo",
+      "type": "registry:component",
+      "title": "Date picker demo",
+      "description": "How to use date picker, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/date-picker.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/date-picker-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/date-picker-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "dialog-demo",
+      "type": "registry:component",
+      "title": "Dialog demo",
+      "description": "How to use dialog, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/dialog.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/dialog-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/dialog-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "display-demo",
+      "type": "registry:component",
+      "title": "Display demo",
+      "description": "How to use display, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/display.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/display-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/display-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "drawer-demo",
+      "type": "registry:component",
+      "title": "Checkbox demo",
+      "description": "How to use checkbox, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/checkbox.json",
+        "https://spec-01.vercel.app/r/drawer.json",
+        "https://spec-01.vercel.app/r/fieldset.json",
+        "https://spec-01.vercel.app/r/segmented-control.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/drawer-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/drawer-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "flat-knob-demo",
+      "type": "registry:component",
+      "title": "Flat knob demo",
+      "description": "How to use flat knob, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/flat-knob.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/flat-knob-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/flat-knob-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "hover-card-demo",
+      "type": "registry:component",
+      "title": "Hover card demo",
+      "description": "How to use hover card, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/hover-card.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/hover-card-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/hover-card-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "item-list-demo",
+      "type": "registry:component",
+      "title": "Item list demo",
+      "description": "How to use item list, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/item-list.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/item-list-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/item-list-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "lcd-demo",
+      "type": "registry:component",
+      "title": "LCD demo",
+      "description": "How to use lcd, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/lcd.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/lcd-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/lcd-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "menu-demo",
+      "type": "registry:component",
+      "title": "Menu demo",
+      "description": "How to use menu, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/menu.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/menu-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/menu-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "menubar-demo",
+      "type": "registry:component",
+      "title": "Menubar demo",
+      "description": "How to use menubar, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/menubar.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/menubar-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/menubar-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "meter-demo",
+      "type": "registry:component",
+      "title": "Meter demo",
+      "description": "How to use meter, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/meter.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/meter-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/meter-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "mode-dial-demo",
+      "type": "registry:component",
+      "title": "Mode dial demo",
+      "description": "How to use mode dial, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/mode-dial.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/mode-dial-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/mode-dial-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "navbar-demo",
+      "type": "registry:component",
+      "title": "Navbar demo",
+      "description": "How to use navbar, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/navbar.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/navbar-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/navbar-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "number-stepper-demo",
+      "type": "registry:component",
+      "title": "Number stepper demo",
+      "description": "How to use number stepper, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/stepper.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/number-stepper-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/number-stepper-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "otp-input-demo",
+      "type": "registry:component",
+      "title": "OTP input demo",
+      "description": "How to use otp input, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/otp-input.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/otp-input-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/otp-input-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "pagination-demo",
+      "type": "registry:component",
+      "title": "Page wheel demo",
+      "description": "How to use page wheel, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/page-wheel.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/pagination-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/pagination-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "popover-demo",
+      "type": "registry:component",
+      "title": "Popover demo",
+      "description": "How to use popover, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/popover.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/popover-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/popover-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "progress-demo",
+      "type": "registry:component",
+      "title": "Progress demo",
+      "description": "How to use progress, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/progress.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/progress-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/progress-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "radio-group-demo",
+      "type": "registry:component",
+      "title": "Radio group demo",
+      "description": "How to use radio group, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/radio-group.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/radio-group-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/radio-group-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "resizable-demo",
+      "type": "registry:component",
+      "title": "Resizable demo",
+      "description": "How to use resizable, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/resizable.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/resizable-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/resizable-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "scroll-area-demo",
+      "type": "registry:component",
+      "title": "Scroll area demo",
+      "description": "How to use scroll area, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/scroll-area.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/scroll-area-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/scroll-area-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "segmented-control-demo",
+      "type": "registry:component",
+      "title": "Segmented control demo",
+      "description": "How to use segmented control, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/segmented-control.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/segmented-control-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/segmented-control-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "select-demo",
+      "type": "registry:component",
+      "title": "Select demo",
+      "description": "How to use select, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/select.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/select-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/select-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "separator-demo",
+      "type": "registry:component",
+      "title": "Separator demo",
+      "description": "How to use separator, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/separator.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/separator-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/separator-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "slide-switch-demo",
+      "type": "registry:component",
+      "title": "Slide switch demo",
+      "description": "How to use slide switch, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/slide-switch.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/slide-switch-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/slide-switch-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "slider-demo",
+      "type": "registry:component",
+      "title": "Slider demo",
+      "description": "How to use slider, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/slider.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/slider-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/slider-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "switch-demo",
+      "type": "registry:component",
+      "title": "Switch demo",
+      "description": "How to use switch, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/switch.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/switch-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/switch-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "tabs-demo",
+      "type": "registry:component",
+      "title": "Tabs demo",
+      "description": "How to use tabs, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/tabs.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/tabs-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/tabs-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "text-field-demo",
+      "type": "registry:component",
+      "title": "Text field demo",
+      "description": "How to use text field, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/text-field.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/text-field-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/text-field-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "textarea-demo",
+      "type": "registry:component",
+      "title": "Textarea demo",
+      "description": "How to use textarea, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/textarea.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/textarea-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/textarea-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "toast-demo",
+      "type": "registry:component",
+      "title": "Toast demo",
+      "description": "How to use toast, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/toast.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/toast-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/toast-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "toggle-group-demo",
+      "type": "registry:component",
+      "title": "Toggle group demo",
+      "description": "How to use toggle group, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/toggle-group.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/toggle-group-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/toggle-group-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "toolbar-demo",
+      "type": "registry:component",
+      "title": "Toolbar demo",
+      "description": "How to use toolbar, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/toolbar.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/toolbar-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/toolbar-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "tooltip-demo",
+      "type": "registry:component",
+      "title": "Icon demo",
+      "description": "How to use icon, as the catalog shows it.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/icon.json",
+        "https://spec-01.vercel.app/r/tooltip.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/examples/tooltip-demo.tsx",
+          "type": "registry:component",
+          "target": "@components/examples/tooltip-demo.tsx"
+        }
+      ],
+      "categories": [
+        "example"
+      ]
+    },
+    {
+      "name": "color",
+      "type": "registry:block",
+      "title": "CX-1 Color",
+      "description": "A color instrument: a hue and lightness dial, harmony swatches, copy and random keys.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/react@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/device.json",
+        "https://spec-01.vercel.app/r/button.json",
+        "https://spec-01.vercel.app/r/display.json",
+        "https://spec-01.vercel.app/r/flat-knob.json",
+        "https://spec-01.vercel.app/r/mode-dial.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/blocks/color/color.tsx",
+          "type": "registry:component",
+          "target": "@components/blocks/color/color.tsx"
+        }
+      ],
+      "categories": [
+        "device"
+      ]
+    },
+    {
+      "name": "dashboard",
+      "type": "registry:block",
+      "title": "DX-1 Dashboard",
+      "description": "A deployment console: an item list on a screen, a bar graph, a D-pad and deploy keys.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/device.json",
+        "https://spec-01.vercel.app/r/bar-graph.json",
+        "https://spec-01.vercel.app/r/button.json",
+        "https://spec-01.vercel.app/r/display.json",
+        "https://spec-01.vercel.app/r/dpad.json",
+        "https://spec-01.vercel.app/r/icon.json",
+        "https://spec-01.vercel.app/r/item-list.json",
+        "https://spec-01.vercel.app/r/slide-switch.json",
+        "https://spec-01.vercel.app/r/toaster.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/blocks/dashboard/dashboard.tsx",
+          "type": "registry:component",
+          "target": "@components/blocks/dashboard/dashboard.tsx"
+        }
+      ],
+      "categories": [
+        "device"
+      ]
+    },
+    {
+      "name": "image-editor",
+      "type": "registry:block",
+      "title": "IX-1 Photo",
+      "description": "A photo editor: aspect and look switches, crop, and an image on a display.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/device.json",
+        "https://spec-01.vercel.app/r/button.json",
+        "https://spec-01.vercel.app/r/checkbox.json",
+        "https://spec-01.vercel.app/r/display.json",
+        "https://spec-01.vercel.app/r/flat-knob.json",
+        "https://spec-01.vercel.app/r/icon.json",
+        "https://spec-01.vercel.app/r/slide-switch.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/blocks/image-editor/image-editor.tsx",
+          "type": "registry:component",
+          "target": "@components/blocks/image-editor/image-editor.tsx"
+        }
+      ],
+      "categories": [
+        "device"
+      ]
+    },
+    {
+      "name": "midi-editor",
+      "type": "registry:block",
+      "title": "MX-1 MIDI",
+      "description": "A step sequencer: a piano roll with spatial keyboard navigation, patterns and tempo.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "dependencies": [
+        "@ui-sdk/core@0.0.0-20261111125312.ga16c1d57"
+      ],
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/device.json",
+        "https://spec-01.vercel.app/r/button.json",
+        "https://spec-01.vercel.app/r/display.json",
+        "https://spec-01.vercel.app/r/flat-knob.json",
+        "https://spec-01.vercel.app/r/icon.json",
+        "https://spec-01.vercel.app/r/slide-switch.json",
+        "https://spec-01.vercel.app/r/tabs.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/blocks/midi-editor/midi-editor.tsx",
+          "type": "registry:component",
+          "target": "@components/blocks/midi-editor/midi-editor.tsx"
+        }
+      ],
+      "categories": [
+        "device"
+      ]
+    },
+    {
+      "name": "music-player",
+      "type": "registry:block",
+      "title": "MP-1 Player",
+      "description": "A music player: transport keys, an LCD, a scrubbing fader and a playlist.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/device.json",
+        "https://spec-01.vercel.app/r/button-group.json",
+        "https://spec-01.vercel.app/r/checkbox.json",
+        "https://spec-01.vercel.app/r/display.json",
+        "https://spec-01.vercel.app/r/flat-knob.json",
+        "https://spec-01.vercel.app/r/icon.json",
+        "https://spec-01.vercel.app/r/item-list.json",
+        "https://spec-01.vercel.app/r/lcd.json",
+        "https://spec-01.vercel.app/r/slider.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/blocks/music-player/film.ts",
+          "type": "registry:component",
+          "target": "@components/blocks/music-player/film.ts"
+        },
+        {
+          "path": "registry/hardware/blocks/music-player/music-player.tsx",
+          "type": "registry:component",
+          "target": "@components/blocks/music-player/music-player.tsx"
+        }
+      ],
+      "categories": [
+        "device"
+      ]
+    },
+    {
+      "name": "paint",
+      "type": "registry:block",
+      "title": "PX-1 Paint",
+      "description": "A drawing pad behind glass, with tool and ink keys, brush dials, undo, clear and save.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/device.json",
+        "https://spec-01.vercel.app/r/alert-dialog.json",
+        "https://spec-01.vercel.app/r/button.json",
+        "https://spec-01.vercel.app/r/display.json",
+        "https://spec-01.vercel.app/r/flat-knob.json",
+        "https://spec-01.vercel.app/r/icon.json",
+        "https://spec-01.vercel.app/r/mode-dial.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/blocks/paint/paint.tsx",
+          "type": "registry:component",
+          "target": "@components/blocks/paint/paint.tsx"
+        }
+      ],
+      "categories": [
+        "device"
+      ]
+    },
+    {
+      "name": "timer",
+      "type": "registry:block",
+      "title": "TM-1 Timer",
+      "description": "A countdown timer on an LCD, with a mode switch and start and reset keys.",
+      "author": "Shu Ding <https://x.com/shuding>",
+      "registryDependencies": [
+        "https://spec-01.vercel.app/r/hardware.json",
+        "https://spec-01.vercel.app/r/device.json",
+        "https://spec-01.vercel.app/r/button.json",
+        "https://spec-01.vercel.app/r/checkbox.json",
+        "https://spec-01.vercel.app/r/icon.json",
+        "https://spec-01.vercel.app/r/lcd.json",
+        "https://spec-01.vercel.app/r/slide-switch.json"
+      ],
+      "files": [
+        {
+          "path": "registry/hardware/blocks/timer/timer.tsx",
+          "type": "registry:component",
+          "target": "@components/blocks/timer/timer.tsx"
+        }
+      ],
+      "categories": [
+        "device"
+      ]
+    }
+  ]
+}

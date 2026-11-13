@@ -1,0 +1,26 @@
+{
+  "name": "spec-01",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port ${PORT:-5610}",
+    "build": "node scripts/registry.mjs && vite build",
+    "registry:build": "node scripts/registry.mjs"
+  },
+  "dependencies": {
+    "@carbon/icons-react": "^11.92.0",
+    "@ui-sdk/core": "0.0.0-20261111125312.ga16c1d57",
+    "@ui-sdk/react": "0.0.0-20261111125312.ga16c1d57",
+    "@vercel/analytics": "^2.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.1.2",
+    "shadcn": "^4.23.0",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.3"
+  }
+}

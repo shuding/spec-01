@@ -1,0 +1,211 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* The theme is light only. The page's gray is on the root too, so the
+     browser's own areas (iOS Safari's status bar and address bar, overscroll)
+     take it instead of a dark-mode black. */
+  color-scheme: light;
+  background: #eeeeec;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+[data-lab="home"] {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 72px 24px;
+
+  & h1 {
+    font-size: 40px;
+    letter-spacing: -0.03em;
+    margin: 0 0 8px;
+  }
+
+  & p {
+    margin: 0 0 24px;
+    opacity: 0.6;
+  }
+
+  & h2 {
+    margin: 48px 0 4px;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  & nav {
+    display: grid;
+    gap: 12px;
+  }
+
+  & a {
+    display: grid;
+    gap: 4px;
+    padding: 24px;
+    border-radius: 16px;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, currentColor 14%, transparent);
+
+    &:hover {
+      background: color-mix(in oklab, currentColor 5%, transparent);
+    }
+  }
+
+  & span {
+    opacity: 0.6;
+  }
+}
+
+[data-back] {
+  position: fixed;
+  inset-block-start: 16px;
+  inset-inline-start: 16px;
+  z-index: 10;
+  font-size: 13px;
+  color: inherit;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+[data-panel] {
+  position: fixed;
+  inset-block-end: 16px;
+  inset-inline-end: 16px;
+  z-index: 30;
+  display: grid;
+  gap: 10px;
+  width: 260px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: #111;
+  background: rgb(255 255 255 / 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow:
+    0 0 0 1px rgb(0 0 0 / 0.08),
+    0 12px 32px -12px rgb(0 0 0 / 0.25);
+  font: 12px ui-sans-serif, system-ui, sans-serif;
+}
+
+[data-panel-row] {
+  display: grid;
+  grid-template-columns: 56px 1fr 36px;
+  align-items: center;
+  gap: 10px;
+
+  & input {
+    width: 100%;
+    accent-color: #111;
+  }
+
+  & output {
+    text-align: end;
+    font-variant-numeric: tabular-nums;
+    opacity: 0.6;
+  }
+}
+
+[data-panel-skins] {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  padding: 2px;
+  border-radius: 8px;
+  background: rgb(0 0 0 / 0.06);
+
+  & button {
+    height: 28px;
+    border: 0;
+    border-radius: 6px;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+
+    &[aria-checked="true"] {
+      background: #fff;
+      box-shadow: 0 1px 3px rgb(0 0 0 / 0.15);
+    }
+  }
+}
+
+[data-panel-theme] {
+  grid-template-columns: 56px 1fr;
+
+  & [role="radiogroup"] {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  & button {
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 0.1);
+    cursor: pointer;
+
+    &[aria-checked="true"] {
+      box-shadow:
+        0 0 0 2px #fff,
+        0 0 0 4px #111;
+    }
+  }
+
+  & input[type="color"] {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+  }
+}
+
+
+[data-panel-presets] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  & a {
+    padding: 3px 9px;
+    border-radius: 99px;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: inset 0 0 0 1px rgb(0 0 0 / 0.1);
+
+    &[aria-current] {
+      color: #fff;
+      background: #111;
+      box-shadow: none;
+    }
+  }
+}
+
+[data-panel] > a {
+  color: #3b5bdb;
+  text-decoration: none;
+  font-weight: 550;
+}
+
+
+/* Text isn't scaled up when a phone turns sideways. */
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}

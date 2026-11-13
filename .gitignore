@@ -1,0 +1,10 @@
+node_modules
+dist
+.vercel
+
+# Font subsetting tool (scripts/fonts/subset.py)
+scripts/fonts/.venv
+__pycache__
+
+# Built by `pnpm registry:build` (scripts/registry.mjs)
+public/r

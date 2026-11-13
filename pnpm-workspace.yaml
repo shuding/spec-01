@@ -1,0 +1,14 @@
+# One package: this project. The field is there because pnpm 9, which
+# Vercel may install with, requires it.
+packages:
+  - '.'
+
+# Build scripts dependencies may run. Carbon's icons ship only an IBM
+# telemetry postinstall, so it's denied.
+allowBuilds:
+  '@carbon/icons-react': false
+  '@carbon/icon-helpers': false
+
+minimumReleaseAgeExclude:
+  - '@ui-sdk/core@0.0.0-20261111125312.ga16c1d57'
+  - '@ui-sdk/react@0.0.0-20261111125312.ga16c1d57'

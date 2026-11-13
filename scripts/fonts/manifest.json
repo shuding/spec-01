@@ -1,0 +1,96 @@
+{
+ "family": "Spec Mono",
+ "source": "IBM Plex Mono 2.3, google/fonts (OFL 1.1, Reserved Font Name \"Plex\")",
+ "features": [
+  "ccmp",
+  "mark"
+ ],
+ "usage": {
+  "weights": [
+   200,
+   300,
+   400,
+   500,
+   550,
+   600,
+   700
+  ],
+  "italics": [
+   "italic"
+  ],
+  "features": [
+   [
+    "font-variant-numeric",
+    "tabular-nums"
+   ]
+  ],
+  "hyphens": false
+ },
+ "left_to_fallback": "U+2192, U+2318, U+25B2, U+25BC, U+25BE, U+25C9, U+25CF, U+2713",
+ "files": [
+  {
+   "weight": 200,
+   "part": "core",
+   "file": "spec-mono-200-core.woff2",
+   "bytes": 4912,
+   "glyphs": 104,
+   "unicode_range": "U+0020-007E, U+00B7, U+2013-2014, U+2018-2019, U+201C-201D, U+2026"
+  },
+  {
+   "weight": 200,
+   "part": "ext",
+   "file": "spec-mono-200-ext.woff2",
+   "bytes": 8344,
+   "glyphs": 292,
+   "unicode_range": "U+00A0-00B6, U+00B8-017F, U+2212"
+  },
+  {
+   "weight": 300,
+   "part": "core",
+   "file": "spec-mono-300-core.woff2",
+   "bytes": 4872,
+   "glyphs": 104,
+   "unicode_range": "U+0020-007E, U+00B7, U+2013-2014, U+2018-2019, U+201C-201D, U+2026"
+  },
+  {
+   "weight": 300,
+   "part": "ext",
+   "file": "spec-mono-300-ext.woff2",
+   "bytes": 8280,
+   "glyphs": 292,
+   "unicode_range": "U+00A0-00B6, U+00B8-017F, U+2212"
+  },
+  {
+   "weight": 400,
+   "part": "core",
+   "file": "spec-mono-400-core.woff2",
+   "bytes": 4980,
+   "glyphs": 104,
+   "unicode_range": "U+0020-007E, U+00B7, U+2013-2014, U+2018-2019, U+201C-201D, U+2026"
+  },
+  {
+   "weight": 400,
+   "part": "ext",
+   "file": "spec-mono-400-ext.woff2",
+   "bytes": 8260,
+   "glyphs": 292,
+   "unicode_range": "U+00A0-00B6, U+00B8-017F, U+2212"
+  },
+  {
+   "weight": 500,
+   "part": "core",
+   "file": "spec-mono-500-core.woff2",
+   "bytes": 4920,
+   "glyphs": 104,
+   "unicode_range": "U+0020-007E, U+00B7, U+2013-2014, U+2018-2019, U+201C-201D, U+2026"
+  },
+  {
+   "weight": 500,
+   "part": "ext",
+   "file": "spec-mono-500-ext.woff2",
+   "bytes": 8364,
+   "glyphs": 292,
+   "unicode_range": "U+00A0-00B6, U+00B8-017F, U+2212"
+  }
+ ]
+}
