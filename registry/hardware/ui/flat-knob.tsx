@@ -1,5 +1,5 @@
 import * as React from "react"
-import { crosses, haptic } from "@/registry/hardware/lib/haptics"
+import { haptic } from "@/registry/hardware/lib/haptics"
 import { NumberInput, NumberInputControl, NumberInputScrubArea } from "@ui-sdk/react/number-input"
 
 // The tick ring round a knob: 28 ticks over a 270deg sweep, every ninth
@@ -7,6 +7,9 @@ import { NumberInput, NumberInputControl, NumberInputScrubArea } from "@ui-sdk/r
 // so it draws the same in every browser; the strokes stay 1px and 2px at
 // any dial size.
 const knobTicks = 27
+// How many tick intervals a value lights, in whole numbers so the ring and
+// the detents agree exactly.
+const litTicks = (value: number) => Math.floor((value * knobTicks) / 100)
 
 function KnobTicks({ lit }: { lit: number }) {
   return (
@@ -21,7 +24,7 @@ function KnobTicks({ lit }: { lit: number }) {
             x2={Math.cos(angle) * 50}
             y2={Math.sin(angle) * 50}
             data-major={i % 9 === 0 || undefined}
-            data-lit={i / knobTicks <= lit || undefined}
+            data-lit={i <= lit || undefined}
           />
         )
       })}
@@ -47,8 +50,9 @@ function FlatKnob({
   const setValue = (next: number | null) => {
     setStored(next)
     if (next === null) return
-    // Twenty detents across the turn, like an encoder's clicks.
-    if (crosses(value ?? 0, next, 5)) haptic("selection")
+    // A detent each time another tick lights or goes out, so the click and
+    // the light land together: 27 across the turn, like an encoder's clicks.
+    if (litTicks(value ?? 0) !== litTicks(next)) haptic("selection")
     onValueChange?.(next)
   }
   const share = (value ?? 0) / 100
@@ -60,7 +64,7 @@ function FlatKnob({
         style={{ "--turn": `${share * 270 - 135}deg`, "--lit": share } as React.CSSProperties}
       >
         <NumberInputScrubArea data-kit="knob-dial" orientation="vertical" pixelsPerStep={2}>
-          <KnobTicks lit={share} />
+          <KnobTicks lit={litTicks(value ?? 0)} />
           <span data-kit="knob-cap" />
         </NumberInputScrubArea>
         <NumberInputControl data-kit="knob-readout" aria-label={label} />
