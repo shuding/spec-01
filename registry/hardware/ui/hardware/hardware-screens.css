@@ -797,8 +797,8 @@
    grows from nothing, and both go back the same way on close. */
 [data-skin="hardware"] [data-kit="backdrop"]:not(#_):not(#_) {
   opacity: 1;
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   transition:
     opacity 240ms cubic-bezier(0.2, 0.8, 0.2, 1),
     backdrop-filter 240ms cubic-bezier(0.2, 0.8, 0.2, 1),
@@ -806,14 +806,14 @@
 
   @starting-style {
     opacity: 0;
-    backdrop-filter: blur(0);
     -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
   }
 
   &:is([data-starting-style], [data-ending-style]) {
     opacity: 0;
-    backdrop-filter: blur(0);
     -webkit-backdrop-filter: blur(0);
+    backdrop-filter: blur(0);
   }
 
   &[data-ending-style] {
@@ -840,8 +840,8 @@
 
 [data-skin="hardware"] [data-kit="backdrop"][data-closed]:not(#_):not(#_) {
   opacity: 0;
-  backdrop-filter: blur(0);
   -webkit-backdrop-filter: blur(0);
+  backdrop-filter: blur(0);
 }
 
 [data-skin="hardware"] [data-kit="popover"][data-closed] [data-kit="popover-surface"]:not([data-size]):not(#_):not(#_):not(#_) {

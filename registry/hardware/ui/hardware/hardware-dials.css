@@ -4,8 +4,8 @@
   --r: 74px;
   --scale-gap: 32px;
   position: relative;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
   touch-action: none;
   cursor: grab;
   width: var(--size);

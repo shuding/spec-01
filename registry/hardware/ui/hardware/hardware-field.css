@@ -1293,8 +1293,8 @@
   /* The dots are the print: the label's glyphs are filled with a dot grid. */
   background-image: radial-gradient(circle, #a3a19b 0.75px, transparent 1px);
   background-size: 2.2px 2.2px;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
 
   &::after {
     content: "";
@@ -1342,8 +1342,8 @@
 [data-skin="hardware"] [data-kit="tabs-list"] [data-kit="tab"][data-selected]:not(#_) {
   color: transparent;
   background: radial-gradient(circle, #4f4d48 0.8px, transparent 1.05px) 0 0 / 2.2px 2.2px;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   box-shadow: none;
   translate: none;
   text-shadow: none;
@@ -1357,15 +1357,15 @@
   letter-spacing: 0.08em;
   color: var(--dim);
   background: none;
-  background-clip: border-box;
   -webkit-background-clip: border-box;
+  background-clip: border-box;
   text-shadow: var(--engraved);
 
   &[data-selected] {
     color: var(--ink);
     background: none;
-    background-clip: border-box;
     -webkit-background-clip: border-box;
+    background-clip: border-box;
     text-shadow: var(--engraved);
   }
 }

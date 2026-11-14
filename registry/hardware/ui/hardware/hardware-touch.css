@@ -22,8 +22,8 @@
    affordable, like the navbar's frosted glass. */
 @media (pointer: coarse) {
   [data-skin="hardware"] [data-kit="backdrop"]:not(#_):not(#_):not(#_) {
-    backdrop-filter: blur(4px) !important;
     -webkit-backdrop-filter: blur(4px) !important;
+    backdrop-filter: blur(4px) !important;
     transition: opacity 200ms cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
@@ -40,8 +40,8 @@
    which cancels the press, so neither happens here. */
 [data-skin="hardware"] [data-kit="context-area"] {
   -webkit-touch-callout: none;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
 }
 
 /* Panel titles are h2s, so the catalog's headings run in order (h1, h2,
